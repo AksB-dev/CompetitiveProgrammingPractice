@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int N;
+    int N,ans=1;
     cin >> N;
     vector<int> a(N);
     for (int i = 0;i<N;i++)
@@ -21,4 +21,13 @@ int main() {
             }
         }
     }
+    for (int i = 0;i<N-1;i++)
+    {
+        if (a[i]!=a[i+1])
+        {
+            ans++;
+        }
+    }
+    cout<<ans;
+
 }
